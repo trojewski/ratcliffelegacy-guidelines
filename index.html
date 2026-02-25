@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratcliffe Legacy Foundation — Brand Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jubilat:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if (sessionStorage.getItem('rlf-guidelines-auth') === '1') {
+      document.documentElement.classList.add('gate-skipped');
+    }
+  </script>
+</head>
+<body>
+  <div id="password-gate" class="password-gate">
+    <div class="password-gate-inner">
+      <h2>Enter Password</h2>
+      <p>This site is restricted. Please enter the password to continue.</p>
+      <form id="password-form">
+        <input type="password" id="password-input" placeholder="Password" autocomplete="current-password">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <p id="password-error" class="password-error" hidden>Incorrect password. Please try again.</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav-brand">
+          <img src="Final Assets/Logo/Logo/Horizontal/PNG/Logo-Horizontal-TwoLine-Left-Default.png" alt="Ratcliffe Legacy Foundation">
+        </a>
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#fonts">Fonts</a></li>
+          <li><a href="#guidelines">Guidelines</a></li>
+          <li><a href="#assets">Assets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Ratcliffe Legacy Foundation</h1>
+        <p class="hero-tagline">Brand Guidelines for Stakeholders & Designers</p>
+        <a href="Brand Guidelines/RLF-Brand-Guidelines.pdf" class="btn btn-primary" download>Download Full Guidelines (PDF)</a>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container">
+        <h2>Brand Overview</h2>
+        <p class="section-intro">The Ratcliffe Legacy Foundation opens doors to stability, dignity, and self-sufficiency. We tackle housing insecurity and wealth inequality, uplift immigrant families, invest in youth, and fund overlooked research.</p>
+        
+        <div class="adjectives">
+          <h3>Brand Adjectives</h3>
+          <p class="adjectives-desc">Our brand should feel…</p>
+          <ul class="adjective-list">
+            <li>Empowering</li>
+            <li>Passionate</li>
+            <li>Bold</li>
+            <li>Respectful</li>
+            <li>Friendly</li>
+            <li>Confident</li>
+            <li>Innovative</li>
+            <li>Transparent</li>
+            <li>Unconventional</li>
+            <li>Collaborative</li>
+            <li>Honest</li>
+            <li>Communal</li>
+            <li>Empathetic</li>
+            <li>Familial</li>
+            <li>Human</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="colors" class="section section-alt">
+      <div class="container">
+        <h2>Brand Color Palette</h2>
+        
+        <div class="color-group">
+          <h3>Primary Brand Colors</h3>
+          <div class="color-swatches primary">
+            <div class="swatch" style="--hex: #4D7A40; --name: 'Green 700'">
+              <span class="swatch-color"></span>
+              <span class="swatch-name">Green 700</span>
+              <span class="swatch-hex">#4D7A40</span>
+            </div>
+            <div class="swatch" style="--hex: #333330; --name: 'Gray 800'">
+              <span class="swatch-color"></span>
+              <span class="swatch-name">Gray 800</span>
+              <span class="swatch-hex">#333330</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="color-group">
+          <h3>Green Scale</h3>
+          <div class="color-swatches">
+            <div class="swatch" style="--hex: #0D140A"><span class="swatch-color"></span><span class="swatch-name">950</span><span class="swatch-hex">#0D140A</span></div>
+            <div class="swatch" style="--hex: #1A2914"><span class="swatch-color"></span><span class="swatch-name">900</span><span class="swatch-hex">#1A2914</span></div>
+            <div class="swatch" style="--hex: #334F2B"><span class="swatch-color"></span><span class="swatch-name">800</span><span class="swatch-hex">#334F2B</span></div>
+            <div class="swatch" style="--hex: #4D7A40"><span class="swatch-color"></span><span class="swatch-name">700</span><span class="swatch-hex">#4D7A40</span></div>
+            <div class="swatch" style="--hex: #5E9952"><span class="swatch-color"></span><span class="swatch-name">600</span><span class="swatch-hex">#5E9952</span></div>
+            <div class="swatch" style="--hex: #78B069"><span class="swatch-color"></span><span class="swatch-name">500</span><span class="swatch-hex">#78B069</span></div>
+            <div class="swatch" style="--hex: #91BF87"><span class="swatch-color"></span><span class="swatch-name">400</span><span class="swatch-hex">#91BF87</span></div>
+            <div class="swatch" style="--hex: #ADCFA6"><span class="swatch-color"></span><span class="swatch-name">300</span><span class="swatch-hex">#ADCFA6</span></div>
+            <div class="swatch" style="--hex: #C9DEC2"><span class="swatch-color"></span><span class="swatch-name">200</span><span class="swatch-hex">#C9DEC2</span></div>
+            <div class="swatch" style="--hex: #E3F0E0"><span class="swatch-color"></span><span class="swatch-name">100</span><span class="swatch-hex">#E3F0E0</span></div>
+            <div class="swatch" style="--hex: #F0F5ED"><span class="swatch-color"></span><span class="swatch-name">50</span><span class="swatch-hex">#F0F5ED</span></div>
+          </div>
+        </div>
+
+        <div class="color-group">
+          <h3>Red Scale</h3>
+          <div class="color-swatches">
+            <div class="swatch" style="--hex: #140A08"><span class="swatch-color"></span><span class="swatch-name">950</span><span class="swatch-hex">#140A08</span></div>
+            <div class="swatch" style="--hex: #2E120A"><span class="swatch-color"></span><span class="swatch-name">900</span><span class="swatch-hex">#2E120A</span></div>
+            <div class="swatch" style="--hex: #572414"><span class="swatch-color"></span><span class="swatch-name">800</span><span class="swatch-hex">#572414</span></div>
+            <div class="swatch" style="--hex: #853621"><span class="swatch-color"></span><span class="swatch-name">700</span><span class="swatch-hex">#853621</span></div>
+            <div class="swatch" style="--hex: #AD4529"><span class="swatch-color"></span><span class="swatch-name">600</span><span class="swatch-hex">#AD4529</span></div>
+            <div class="swatch" style="--hex: #D15C3B"><span class="swatch-color"></span><span class="swatch-name">500</span><span class="swatch-hex">#D15C3B</span></div>
+            <div class="swatch" style="--hex: #DB8066"><span class="swatch-color"></span><span class="swatch-name">400</span><span class="swatch-hex">#DB8066</span></div>
+            <div class="swatch" style="--hex: #E39E8C"><span class="swatch-color"></span><span class="swatch-name">300</span><span class="swatch-hex">#E39E8C</span></div>
+            <div class="swatch" style="--hex: #EDC2B5"><span class="swatch-color"></span><span class="swatch-name">200</span><span class="swatch-hex">#EDC2B5</span></div>
+            <div class="swatch" style="--hex: #F5E0D9"><span class="swatch-color"></span><span class="swatch-name">100</span><span class="swatch-hex">#F5E0D9</span></div>
+            <div class="swatch" style="--hex: #FAEDEB"><span class="swatch-color"></span><span class="swatch-name">50</span><span class="swatch-hex">#FAEDEB</span></div>
+          </div>
+        </div>
+
+        <div class="color-group">
+          <h3>Blue Scale</h3>
+          <div class="color-swatches">
+            <div class="swatch" style="--hex: #051417"><span class="swatch-color"></span><span class="swatch-name">950</span><span class="swatch-hex">#051417</span></div>
+            <div class="swatch" style="--hex: #0A2E30"><span class="swatch-color"></span><span class="swatch-name">900</span><span class="swatch-hex">#0A2E30</span></div>
+            <div class="swatch" style="--hex: #0D595C"><span class="swatch-color"></span><span class="swatch-name">800</span><span class="swatch-hex">#0D595C</span></div>
+            <div class="swatch" style="--hex: #17878C"><span class="swatch-color"></span><span class="swatch-name">700</span><span class="swatch-hex">#17878C</span></div>
+            <div class="swatch" style="--hex: #1CB0BA"><span class="swatch-color"></span><span class="swatch-name">600</span><span class="swatch-hex">#1CB0BA</span></div>
+            <div class="swatch" style="--hex: #30D6DE"><span class="swatch-color"></span><span class="swatch-name">500</span><span class="swatch-hex">#30D6DE</span></div>
+            <div class="swatch" style="--hex: #5CDEE5"><span class="swatch-color"></span><span class="swatch-name">400</span><span class="swatch-hex">#5CDEE5</span></div>
+            <div class="swatch" style="--hex: #8CE8ED"><span class="swatch-color"></span><span class="swatch-name">300</span><span class="swatch-hex">#8CE8ED</span></div>
+            <div class="swatch" style="--hex: #B5F0F2"><span class="swatch-color"></span><span class="swatch-name">200</span><span class="swatch-hex">#B5F0F2</span></div>
+            <div class="swatch" style="--hex: #D6F7FA"><span class="swatch-color"></span><span class="swatch-name">100</span><span class="swatch-hex">#D6F7FA</span></div>
+            <div class="swatch" style="--hex: #EDFAFC"><span class="swatch-color"></span><span class="swatch-name">50</span><span class="swatch-hex">#EDFAFC</span></div>
+          </div>
+        </div>
+
+        <div class="color-group">
+          <h3>Gray Scale</h3>
+          <div class="color-swatches">
+            <div class="swatch" style="--hex: #0D0D0D"><span class="swatch-color"></span><span class="swatch-name">950</span><span class="swatch-hex">#0D0D0D</span></div>
+            <div class="swatch" style="--hex: #1A1A1A"><span class="swatch-color"></span><span class="swatch-name">900</span><span class="swatch-hex">#1A1A1A</span></div>
+            <div class="swatch" style="--hex: #333330"><span class="swatch-color"></span><span class="swatch-name">800</span><span class="swatch-hex">#333330</span></div>
+            <div class="swatch" style="--hex: #4F4D4A"><span class="swatch-color"></span><span class="swatch-name">700</span><span class="swatch-hex">#4F4D4A</span></div>
+            <div class="swatch" style="--hex: #696663"><span class="swatch-color"></span><span class="swatch-name">600</span><span class="swatch-hex">#696663</span></div>
+            <div class="swatch" style="--hex: #82807D"><span class="swatch-color"></span><span class="swatch-name">500</span><span class="swatch-hex">#82807D</span></div>
+            <div class="swatch" style="--hex: #9C9996"><span class="swatch-color"></span><span class="swatch-name">400</span><span class="swatch-hex">#9C9996</span></div>
+            <div class="swatch" style="--hex: #B5B2B0"><span class="swatch-color"></span><span class="swatch-name">300</span><span class="swatch-hex">#B5B2B0</span></div>
+            <div class="swatch" style="--hex: #CCCCCC"><span class="swatch-color"></span><span class="swatch-name">200</span><span class="swatch-hex">#CCCCCC</span></div>
+            <div class="swatch" style="--hex: #E5E5E5"><span class="swatch-color"></span><span class="swatch-name">100</span><span class="swatch-hex">#E5E5E5</span></div>
+            <div class="swatch" style="--hex: #F2F2F2"><span class="swatch-color"></span><span class="swatch-name">50</span><span class="swatch-hex">#F2F2F2</span></div>
+          </div>
+        </div>
+
+        <div class="color-group neutrals">
+          <div class="color-swatches">
+            <div class="swatch" style="--hex: #FFFFFF"><span class="swatch-color"></span><span class="swatch-name">White</span><span class="swatch-hex">#FFFFFF</span></div>
+            <div class="swatch" style="--hex: #000000"><span class="swatch-color"></span><span class="swatch-name">Black</span><span class="swatch-hex">#000000</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fonts" class="section">
+      <div class="container">
+        <h2>Brand Typography</h2>
+        <p class="section-intro">The brand utilizes two fonts: <strong>Jubilat</strong> (friendly, approachable, institutional) and <strong>Lexend</strong> (geometric sans-serif with circular forms). Both maintain high legibility across scales.</p>
+        
+        <div class="font-showcase">
+          <div class="font-sample jubilat">
+            <h3>Jubilat</h3>
+            <p class="font-title">Helping People Help Each Other</p>
+          </div>
+          <div class="font-sample lexend">
+            <h3>Lexend</h3>
+            <p class="font-title">Helping People Help Each Other</p>
+          </div>
+        </div>
+        
+        <div class="font-hierarchy">
+          <h3>Text Hierarchy</h3>
+          <table>
+            <thead>
+              <tr><th>Style</th><th>Font</th><th>Weight</th><th>Case</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Title</td><td>Jubilat</td><td>Medium</td><td>Title</td></tr>
+              <tr><td>Headlines 1–3</td><td>Jubilat</td><td>Medium</td><td>Title</td></tr>
+              <tr><td>Subheading 1</td><td>Jubilat</td><td>SemiBold</td><td>Title</td></tr>
+              <tr><td>Subheadings 2–3</td><td>Lexend</td><td>SemiBold</td><td>Title</td></tr>
+              <tr><td>Body</td><td>Jubilat</td><td>Regular</td><td>Sentence</td></tr>
+              <tr><td>Caption</td><td>Lexend</td><td>Regular</td><td>Sentence</td></tr>
+              <tr><td>Overline</td><td>Lexend</td><td>SemiBold</td><td>All Caps</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="guidelines" class="section section-alt">
+      <div class="container">
+        <h2>Brand Guidelines Document</h2>
+        <p class="section-intro">Download the complete brand guidelines PDF for detailed rules on logo usage, logo constraints, collateral examples, and more.</p>
+        <a href="Brand Guidelines/RLF-Brand-Guidelines.pdf" class="btn btn-primary btn-large" download>
+          <span class="btn-icon">↓</span>
+          Download RLF-Brand-Guidelines.pdf
+        </a>
+      </div>
+    </section>
+
+    <section id="assets" class="section">
+      <div class="container">
+        <h2>Download Assets</h2>
+        <p class="section-intro">Browse and download logos, ripple graphics, social media icons, and fonts. Click any format to download.</p>
+        
+        <div id="assets-content">
+          <p class="loading">Loading assets…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Ratcliffe Legacy Foundation. Brand guidelines for internal use.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    (function() {
+      const GATE_ID = 'password-gate';
+      const STORAGE_KEY = 'rlf-guidelines-auth';
+      const PASSWORD = 'ThreeOaks!';
+
+      function hideGate() {
+        const gate = document.getElementById(GATE_ID);
+        if (gate) gate.classList.add('is-authenticated');
+      }
+
+      function showError() {
+        const err = document.getElementById('password-error');
+        if (err) err.hidden = false;
+      }
+
+      if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+        hideGate();
+      } else {
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const input = document.getElementById('password-input');
+          const err = document.getElementById('password-error');
+          if (input && input.value === PASSWORD) {
+            sessionStorage.setItem(STORAGE_KEY, '1');
+            err.hidden = true;
+            hideGate();
+          } else {
+            showError();
+            if (input) input.value = '';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
