@@ -47,7 +47,7 @@ function renderAssets(data) {
     const logoAssets = [
       ...(data.Logo.images || []),
       ...(data.Logo.rippleMonograms || [])
-    ];
+    ].map(normalizeUpdatedLogoAsset);
     const logoSubsections = groupLogoAssets(logoAssets);
     const subsectionOrder = ['Brandmark', 'Badge', 'Logo', 'Wordmark', 'Initials', 'Ripple Monogram'];
     for (const key of subsectionOrder) {
@@ -192,6 +192,33 @@ function escapeHtml(s) {
 
 function getFileName(path) {
   return path ? path.split('/').pop() : 'download';
+}
+
+const UPDATED_LOGO_ASSETS = {
+  'Badge-Tagline-Default': {
+    thumbnail: 'Final Assets/Logo/Badge/Tagline/SVG/Badge-Tagline-Default.svg',
+    formats: [
+      { path: 'Final Assets/Logo/Badge/Tagline/SVG/Badge-Tagline-Default.svg', ext: 'svg' },
+      { path: 'Final Assets/Logo/Badge/Tagline/PNG/Badge-Tagline-Default.png', ext: 'png' }
+    ]
+  },
+  'Badge-Tagline-White': {
+    thumbnail: 'Final Assets/Logo/Badge/Tagline/SVG/Badge-Tagline-White.svg',
+    formats: [
+      { path: 'Final Assets/Logo/Badge/Tagline/SVG/Badge-Tagline-White.svg', ext: 'svg' },
+      { path: 'Final Assets/Logo/Badge/Tagline/PNG/Badge-Tagline-White.png', ext: 'png' }
+    ]
+  }
+};
+
+function normalizeUpdatedLogoAsset(asset) {
+  const pinned = UPDATED_LOGO_ASSETS[asset.name];
+  if (!pinned) return asset;
+  return {
+    ...asset,
+    thumbnail: pinned.thumbnail,
+    formats: pinned.formats
+  };
 }
 
 const BUSINESS_CARD_FALLBACKS = [
