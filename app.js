@@ -63,11 +63,12 @@ function renderAssets(data) {
     html += '</div>';
   }
 
-  // Business Card (if from generator)
-  if (data['Business Card'] && data['Business Card'].images?.length) {
+  // Business Card PDFs
+  const businessCardAssets = getBusinessCardAssets(data);
+  if (businessCardAssets.length) {
     html += '<div class="assets-category"><h3>Business Card</h3>';
     html += '<div class="asset-grid">';
-    for (const asset of data['Business Card'].images) {
+    for (const asset of businessCardAssets) {
       html += renderImageCard(asset);
     }
     html += '</div></div>';
@@ -191,6 +192,55 @@ function escapeHtml(s) {
 
 function getFileName(path) {
   return path ? path.split('/').pop() : 'download';
+}
+
+const BUSINESS_CARD_FALLBACKS = [
+  'Business-Card-Back-Blank.pdf',
+  'Business-Card-Front.pdf',
+  'Business-Card-Robert-Ratcliffe.pdf',
+  'Business-Card-Ryan-Ratcliffe.pdf',
+  'Business-Card-TR-Beasley.pdf'
+];
+
+function getBusinessCardAssets(data) {
+  const existing = data['Business Card']?.images || [];
+  const byName = new Map(existing.map((asset) => [asset.name, { ...asset }]));
+
+  for (const file of BUSINESS_CARD_FALLBACKS) {
+    const name = file.replace('.pdf', '');
+    const pdfPath = `Final Assets/Business Card/${file}`;
+    const jpgPath = `Final Assets/Business Card/${name}.jpg`;
+    const existingAsset = byName.get(name);
+
+    if (existingAsset) {
+      const formats = existingAsset.formats || [];
+      const hasPdf = formats.some((fmt) => String(fmt.ext || '').toLowerCase() === 'pdf');
+      if (!hasPdf) {
+        formats.unshift({ path: pdfPath, ext: 'pdf' });
+      } else {
+        existingAsset.formats = formats.map((fmt) =>
+          String(fmt.ext || '').toLowerCase() === 'pdf' ? { ...fmt, path: pdfPath } : fmt
+        );
+      }
+      if (!existingAsset.thumbnail) existingAsset.thumbnail = jpgPath;
+      if (!existingAsset.formats) existingAsset.formats = formats;
+      byName.set(name, existingAsset);
+      continue;
+    }
+
+    byName.set(name, {
+      name,
+      thumbnail: jpgPath,
+      formats: [
+        {
+          path: pdfPath,
+          ext: 'pdf'
+        }
+      ]
+    });
+  }
+
+  return Array.from(byName.values());
 }
 
 // Font weight order (lightest to heaviest) for sorting
